@@ -1,5 +1,5 @@
 //This JS File is linked to index.html for Psychic Game
-let alphabet = [
+let computerGuesses = [
     "a",
     "b",
     "c",
@@ -27,25 +27,10 @@ let alphabet = [
     "y",
     "z"
   ];
- 
-let wins = []
-  
-let computerGuess = Math.floor(Math.random() * alphabet.length);
- console.log(computerGuess)
-  //Dom manipulation
-let userGuess = document.getElementsByClassName("yourGuess");
-let winner = document.getElementsByClassName("wins");
-let lost = document.getElementsByClassName("losses");
-let guesses = document.getElementsByClassName("guessesLeft");
-  // Setup event function for key press
-document.addEventListener('keypress', (event) => {
-    
-let keyword = String.fromCharCode(event.keyCode);
-    
-    if (yourGuess.indexOf(keyword) > -1) {
-        winner.push(keyword);
 
-        wins[computerGuess.indexOf(keyword)] = keyword;
-        winner[0].innerHTML = wins.join(+ 1);
-    };
-});
+  let wins = 0;
+  let losses = 0;
+  let guesses = 9;
+  let guessesLeft = 9;
+  let guessedLetters = [];
+  var letterToGuess = null;

@@ -13,17 +13,18 @@ border: 5px black double;
 }
 
 .wins {
-text-align: center;
+
+
 }
 
 .losses {
-text-align: center;
+
 }
 
 .guessesLeft {
-text-align: center;
+
 }
 
 .yourGuess{
-text-align: center;
+
 }

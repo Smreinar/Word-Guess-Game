@@ -25,42 +25,27 @@
             <!--IMAGE?-->
 
             <hr class=" mt-0 bg-dark">
-            <!--WINS-->
-            <div class="row p-2">
-                <div class="col-md-12 float-right border border-primary mt-1">
-                    <div class="wins">
-                        <h4>Wins:</h4>
-                       
-                    </div>
-                </div>    
-              
-                <!--LOSSES-->
-           
-                <div class="col-md-12 float-right border border-success mt-1">
-                    <div class="losses">
-                        <h4>Losses:</h4>
+            <!---->
+            <div id="game">
+                <ul class="list-group-item border-primary">
+                    
+                    <li class="list-group-item border-primary">
+                        <span id="wins">Wins: </span>
+                    </li>
 
-                        
-                    </div>
-                </div>
-              
-                <!--GUESSES REMAINING-->
-                <div class="col-md-12 border border-danger mt-1">
-                    <div class="guessesLeft">
-                    <h4>Guesses Remaining:</h4>
+                    <li class="list-group-item border-primary">
+                        <p id="losses">Losses: </p>
+                    </li>
 
-                 
-                    </div>
-                </div>
-                <!--USER GUESSES-->
-                <div class="col-md-12 border border-info mt-1">
-                     <div class="yourGuess">
-                      <h4>you've guessed</h4>
-                      
-                     </div>
-                </div>
+                    <li class="list-group-item border-primary">
+                        <p id="guessesLeft">Guess Remaining: </p>
+                    </li>
+
+                    <li class="list-group-item border-primary">
+                        <p id="userGuesses">Your Guesses So Far: </p>
+                    </li>
+                </ul>
             </div>
-            
              
             <script src="assets/javascript/game.js"></script>
             
