@@ -1,0 +1,29 @@
+header {
+margin: 0 auto;    
+text-align: center;
+border: 5px black solid;
+background-color: chartreuse;
+padding: 10px;
+
+}
+
+.container{
+border: 5px black double;
+
+}
+
+.wins {
+text-align: center;
+}
+
+.losses {
+text-align: center;
+}
+
+.guessesLeft {
+text-align: center;
+}
+
+.yourGuess{
+text-align: center;
+}

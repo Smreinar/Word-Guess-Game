@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Psychic Game</title>
+      
+      <!--Bootstrap-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!--css-->
+      <link rel="stylesheet" href="assets/css/style.css">
+    
+    </head>
+    <body>
+      
+   
+        <div class="container">
+            <!--HEADER-->
+            <div class="jumbotron border border-dark bg-primary">
+                <header>
+                    <h1>Psychic Game</h1>
+                    <br>
+                    
+                    <h3>Can You Guess What Letter I'm Thinking?</h3>
+                </header>
+            </div>
+            <!--IMAGE?-->
+
+            <hr class=" mt-0 bg-dark">
+            <!--WINS-->
+            <div class="row p-2">
+                <div class="col-md-12 float-right border border-primary mt-1">
+                    <div class="wins">
+                        <h4>Wins:</h4>
+                       
+                    </div>
+                </div>    
+              
+                <!--LOSSES-->
+           
+                <div class="col-md-12 float-right border border-success mt-1">
+                    <div class="losses">
+                        <h4>Losses:</h4>
+
+                        
+                    </div>
+                </div>
+              
+                <!--GUESSES REMAINING-->
+                <div class="col-md-12 border border-danger mt-1">
+                    <div class="guessesLeft">
+                    <h4>Guesses Remaining:</h4>
+
+                 
+                    </div>
+                </div>
+                <!--USER GUESSES-->
+                <div class="col-md-12 border border-info mt-1">
+                     <div class="yourGuess">
+                      <h4>you've guessed</h4>
+                      
+                     </div>
+                </div>
+            </div>
+            
+             
+            <script src="assets/javascript/game.js"></script>
+            
+        
+        </div>
+    </body> 
+</html>
