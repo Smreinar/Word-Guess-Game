@@ -6,15 +6,12 @@ var computerAnswer = computerGuesses[Math.floor(Math.random() * computerGuesses.
 var guessedLetters = [];
 var win = 0;
 var lost = 0;
-var lives = 9;
+let lives = 9;
 
 
 
 //console.log("Computer Guess: " + computerAnswer);
 //functions for each
-function lettersGuessed() {
-    document.getElementsById("userGuesses").innerHTML = "Your Guesses So Far: " + guessedLetters.join(', ')
-}
 
 function computerAnswerFun() {
     document.getElementsByClassName('.computer').style.display = "none";
@@ -29,33 +26,45 @@ function resetComputerAnswer(){
 function resetRound(){
     guessedLetters = [];
     lives = 9;
+
 }
 
 //Dom
 let guessDom = document.getElementsByClassName("userGuesses");
 let livesDom = document.getElementById("guessesLeft");
+let lossDom = document.getElementById("losses");
+let winDom = document.getElementById("wins")
 
-
+console.log(computerAnswer)
 
 //user guess 
 document.onkeyup = function(event) {
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-    var wins = win
+    
      
-    if (userGuess === computerAnswer) {
-        wins++;
-        alert("Your Guess '" + userGuess + "' Was Correct");
-        guessedLetters.push(userGuess);
-        document.getElementById("wins").innerHTML = "Wins: " + wins;
-        
-        resetComputerAnswer();
-           
-    } if (userGuess != computerAnswer){
+    if (userGuess != computerAnswer){
         lives--;
         guessedLetters.push(userGuess);
         guessDom[0].innerHTML = guessedLetters.join(' ');
         livesDom.innerHTML = lives;
-    }
+        }
+
+        if (userGuess === computerAnswer) {
+        win++;
+        winDom.innerHTML = win;
+        livesDom.innerHTML = '9';
+        guessDom[0].innerHTML = [];
+        resetRound();
+        resetComputerAnswer();
+        }
+        if (lives == 0) {
+            lost++;
+            lossDom.innerHTML = lost;
+            livesDom.innerHTML = '9';
+            guessDom[0].innerHTML = [];
+            resetRound();
+            resetComputerAnswer();
+        }
 
    
 
