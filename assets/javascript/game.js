@@ -40,8 +40,14 @@ console.log(computerAnswer)
 //user guess 
 document.onkeyup = function(event) {
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    var checkLetter = guessedLetters.includes(userGuess);
     
-     
+    if (checkLetter == true){
+        alert("You've Guessed That Already");
+        return false;
+
+        
+    }
     if (userGuess != computerAnswer){
         lives--;
         guessedLetters.push(userGuess);
